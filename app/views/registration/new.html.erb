@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Sign Up</h1>
+<%= form_with model: @user, url: signUp_path, data: { turbo: false } do |form| %>
+  <%= form.label :email %><br/>
+  <%= form.text_field :email %><br/><br/>
+  <%= form.label :password %><br/>
+  <%= form.password_field :password %><br/><br/>
+  <div>
+    <%= form.submit "Sign up", class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
